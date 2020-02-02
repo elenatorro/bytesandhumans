@@ -1,9 +1,13 @@
 import Vue from 'vue'
-import HelloWorld from './components/HelloWorld'
+import HeaderTitle from './components/HeaderTitle'
+import NavBar from './components/NavBar'
+import './style/main.scss';
 
-Vue.component('helloWorld', HelloWorld)
+Vue.component('headerTitle', HeaderTitle)
+Vue.component('navBar', NavBar)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app'
+  el: '#app',
+  delimiters: ['{!' , '!}']
 })

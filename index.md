@@ -2,4 +2,4 @@
 layout: default
 ---
 
-<hello-world></hello-world>
+<header-title title="Bytes And Humans"></header-title>
