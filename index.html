@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<header-container>
+  <header-title title="{{ site.title }}"></header-title>
+  <p>{{ site.description }}</p>
+</header-container>
+
+<post-list :posts='{{ site.posts | jsonify }}'></post-list>

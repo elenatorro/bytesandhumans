@@ -1,6 +1,26 @@
----
-layout: default
-page-type: post
----
+<!doctype html>
+<html lang="en">
 
-## This is a post.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ site.title }}</title>
+</head>
+
+<body>
+  <div id="app">
+    <nav-bar :pages={{ site.data.pages | jsonify }}></nav-bar>
+    <post-container
+      title="{{ page.title }}"
+      url="{{ page.url }}"
+      date="{{ page.date }}"
+      :categories="{{ page.categories | jsonify }}"
+      >
+      {{ content }}
+    </post-container>
+  </div>
+  {% include scripts.html %}
+</body>
+
+</html>

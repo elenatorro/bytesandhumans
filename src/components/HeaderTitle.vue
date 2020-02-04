@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ title }}</h1>
+  <h1 class="HeaderTitle">{{ title }}</h1>
 </template>
 
 <script>
@@ -10,8 +10,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  padding: 1em;
+.HeaderTitle {
   font-size: 4rem;
   color: var(--bah--primary-color-dark);
 }

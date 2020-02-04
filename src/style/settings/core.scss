@@ -8,7 +8,6 @@ p {
   margin: 0
 }
 
-
 ul {
   padding: 0;
 }
@@ -17,4 +16,14 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: var(--bah--primary-color-dark);
+  text-decoration: none;
+
+  &:visited,
+  &:focus {
+    color: var(--bah--primary-color-dark);
+  }
 }

@@ -22,6 +22,7 @@ export default {
 .NavBar__List {
   display: flex;
   justify-content: flex-end;
+  background-color: var(--bah--secondary-color-dark);
   margin: 0;
   padding: 2rem;
 }
