@@ -28,12 +28,12 @@ export default {
 
 <style lang="scss" scoped>
 .PostContainer {
-  margin: 4em;
+  margin: 0;
 }
 
 .PostContainer__Title {
   transform: rotate(-5deg);
-  margin-top: 3em;
+  margin-top: 1em;
   position: relative;
   background-color: yellow;
   color: transparent;
