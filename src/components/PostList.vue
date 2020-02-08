@@ -20,9 +20,6 @@
 export default {
   name: 'PostList',
   props: ['posts'],
-  mounted() {
-    console.log('!!!', this.posts);
-  },
   method: {
     rotation() {
       const MAX = 6

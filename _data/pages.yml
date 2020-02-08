@@ -4,5 +4,5 @@
 - name: Contact
   path: contact
 
-- name: Home
+- name: '🏠'
   path: ''

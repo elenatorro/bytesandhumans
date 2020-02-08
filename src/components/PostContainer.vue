@@ -1,11 +1,14 @@
 <template>
   <section class="PostContainer">
-    <div class="PostContainer__Content">
-      <h1 class="PostContainer__Title" v-if="title" :data-title="title">{{ title }}</h1>
-      <p class="PostContainer__Date">🗓️ {{ parsedDate | moment('DD/MM/YYYY') }}</p>
-      <div class="PostContainer__InnerContent">
-        <slot></slot>
+    <header class="PostContainer__Header">
+      <div class="PostContainer__Header--title">
+        <h1 class="PostContainer__Title" v-if="title" :data-title="title">{{ title }}</h1>
+        <p class="PostContainer__Date">🗓️ {{ parsedDate | moment('DD/MM/YYYY') }}</p>
       </div>
+      <img class="PostContainer__Image" v-if="image" :src="imagePath" />
+    </header>
+    <div class="PostContainer__Content">
+      <slot></slot>
     </div>
   </section>
 </template>
@@ -16,9 +19,13 @@ export default {
   props: [
     'title',
     'url',
-    'date'
+    'date',
+    'image'
   ],
   computed: {
+    imagePath() {
+      return `/assets/img/posts/${this.image}`
+    },
     parsedDate() {
       return new Date(this.date.split(' ')[0])
     }
@@ -31,11 +38,31 @@ export default {
   margin: 0;
 }
 
+.PostContainer__Header {
+  position: relative;
+  height: 25em;
+  z-index: 1;
+}
+
+.PostContainer__Header--title {
+  z-index: 1;
+}
+
+.PostContainer__Image {
+  position: absolute;
+  left: 8em;
+  max-height: 20em;
+  top: 2em;
+  z-index: -1;
+  border: .5em solid var(--bah--third-color);
+  transform: rotate(5deg);
+}
+
 .PostContainer__Title {
   transform: rotate(-5deg);
   margin-top: 1em;
   position: relative;
-  background-color: yellow;
+  background-color: var(--bah--third-color);
   color: transparent;
   max-width: 35vw;
 
@@ -55,7 +82,8 @@ export default {
   max-width: 35vw;
 }
 
-.PostContainer__InnerContent {
+.PostContainer__Content {
   padding: 4em 0;
+  line-height: 1.5;
 }
 </style>
