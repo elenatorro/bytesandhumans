@@ -15,9 +15,10 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 50vh;
   padding: 4em;
   background-color: var(--bah--secondary-color-dark);
+  border-bottom: .25em solid var(--bah--black-color);
 
   p {
     margin: 1em 0;

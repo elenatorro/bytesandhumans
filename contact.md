@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Contact
+permalink: /contact/
 ---
 
 <header-container>
@@ -8,8 +10,7 @@ layout: default
 </header-container>
 
 <main-container>
-  <post-list :posts='{{ site.posts | jsonify }}'></post-list>
-  <aside-container>
-    <h3>Social Networks</h3>
-  </aside-container>
+
+Contact Page
+
 </main-container>
