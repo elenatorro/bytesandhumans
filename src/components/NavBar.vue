@@ -5,7 +5,7 @@
         v-for="(page, index) in pages"
         :key="index"
         :page="page">
-        <a :href="page.path">{{page.name}}</a>
+        <a :href="`${url}/${page.path}`">{{page.name}}</a>
       </li>
     </ul>
   </nav>
@@ -14,7 +14,7 @@
 <script>
 export default {
   name: 'NavBar',
-  props: ['pages']
+  props: ['url', 'pages']
 }
 </script>
 
@@ -24,11 +24,12 @@ export default {
   justify-content: flex-end;
   background-color: var(--bah--secondary-color-dark);
   margin: 0;
-  padding: 2rem;
+  border-bottom: .25em solid var(--bah--black-color);
 }
 
 .NavBar__ListItem {
-  padding: 0 2rem;
+  padding: 1em 2em;
+  border-left: .25em solid var(--bah--black-color);
 
   a {
     color: var(--bah--primary-color-dark);

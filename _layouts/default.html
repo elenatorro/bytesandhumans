@@ -10,7 +10,7 @@
 
 <body>
   <div id="app">
-    <nav-bar :pages={{ site.data.pages | jsonify }}></nav-bar>
+    <nav-bar :url='{{ site.url | jsonify }}' :pages='{{ site.data.pages | jsonify }}'></nav-bar>
     {{ content }}
   </div>
   {% include scripts.html %}

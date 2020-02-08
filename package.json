@@ -9,7 +9,7 @@
     "jekyll:watch": "bundle exec jekyll build --watch --incremental",
     "jekyll:build": "bundle exec jekyll build",
     "serve": "browser-sync start --config browser-sync.js",
-    "start": "npm run watch && npm run jekyll:watch & npm run serve",
+    "start": "npm run watch && npm run serve",
     "watch": "cross-env NODE_ENV=development webpack --watch"
   },
   "keywords": [
