@@ -6,6 +6,7 @@ import HeaderTitle from './components/HeaderTitle'
 import MainContainer from './components/MainContainer'
 import AsideContainer from './components/AsideContainer'
 import PostList from './components/PostList'
+import PostListItem from './components/PostListItem'
 import PostContainer from './components/PostContainer'
 import './style/main.scss'
 
@@ -17,6 +18,7 @@ Vue.component('mainContainer', MainContainer)
 Vue.component('asideContainer', AsideContainer)
 Vue.component('headerTitle', HeaderTitle)
 Vue.component('postList', PostList)
+Vue.component('postListItem', PostListItem)
 Vue.component('postContainer', PostContainer)
 
 Vue.use(moment)

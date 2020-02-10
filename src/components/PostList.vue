@@ -1,31 +1,39 @@
 <template>
   <ul class="PostList">
-    <li
-      class="PostList__ListItem"
-      v-for="(post, index) in posts"
+    <PostListItem
+      v-for="(post, index) in postList"
       :key="index"
-      :page="post"
-      :style="{'background-image': `url('assets/img/posts/${post.image}')`}">
-      <a class="PostList__Link"
-        :href="post.url">
-        <p class="PostList__Title">{{post.title}}</p>
-
-        <p>{{post.excerpt}}</p>
-      </a>
-    </li>
+      :post="post"
+      :index="index"
+      @postIntersecting="onPostIntersecting">
+    </PostListItem>
   </ul>
 </template>
 
 <script>
+import PostListItem from './PostListItem'
+
 export default {
   name: 'PostList',
   props: ['posts'],
-  method: {
-    rotation() {
-      const MAX = 6
-      const MIN = -6
-
-      return Math.floor(Math.random() * MAX) + MIN
+  data() {
+    return {
+      postList: []
+    }
+  },
+  beforeMount() {
+    if (this.posts.length) {
+      this.postList.push(this.posts[0])
+    }
+  },
+  components: {
+    PostListItem
+  },
+  methods: {
+    onPostIntersecting(index) {
+      if (this.posts[index+1]) {
+        this.postList.push(this.posts[index+1])
+      }
     }
   }
 }
