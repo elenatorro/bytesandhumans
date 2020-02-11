@@ -37,25 +37,21 @@ export default {
     style() {
       return this.loaded
         ? {'background-image': `url('${this.src}')`}
-        : {'background-color': 'blue'}
+        : {'background-color': 'inherit'}
     }
   },
   methods: {
     connectInteractionObserver() {
       this.observer = new IntersectionObserver((items) => {
-
         const item = items[0]
+
         if (item.isIntersecting) {
           this.$emit('postIntersecting', this.index)
+          this.observer.disconnect()
         }
       })
 
       this.observer.observe(this.$el)
-    },
-
-    loadImage () {
-      const postImage = new Image();
-
     }
   },
   beforeMount() {
@@ -83,6 +79,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--bah--primary-color);
   box-shadow: .5em .5em 0px var(--bah--black-color);
 
   &:hover {
@@ -98,7 +95,7 @@ export default {
   height: 100%;
   width: 100%;
   padding: 1em;
-  align-items: self-end;
+  align-items: flex-end;
   color: var(--bah--white-color);
 }
 
