@@ -28,7 +28,7 @@ export default {
 }
 
 .NavBar__ListItem {
-  padding: 2em 2em 0 2em;
+  padding: 2em;
 
   a {
     color: var(--bah--primary-color-dark);
