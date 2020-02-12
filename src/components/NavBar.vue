@@ -24,12 +24,11 @@ export default {
   justify-content: flex-end;
   background-color: var(--bah--secondary-color-dark);
   margin: 0;
-  border-bottom: .25em solid var(--bah--black-color);
+  padding-right: 4em;
 }
 
 .NavBar__ListItem {
-  padding: 1em 2em;
-  border-left: .25em solid var(--bah--black-color);
+  padding: 2em 2em 0 2em;
 
   a {
     color: var(--bah--primary-color-dark);

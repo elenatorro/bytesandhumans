@@ -1,14 +1,15 @@
 <template>
-  <li
-    class="PostListItem"
-    :style="this.style">
-    <a
-      class="PostListItem__Link"
-      :href="post.url">
-      <p class="PostListItem__Title">{{post.title}}</p>
-
-      <p>{{post.excerpt}}</p>
-    </a>
+  <li class="PostListItem">
+    <div
+      class="PostListItem__Container"
+      :style="this.style">
+      <a
+        class="PostListItem__Link"
+        :href="post.url">
+        <p class="PostListItem__Title">{{post.title}}</p>
+      </a>
+    </div>
+    <p class="PostListItem__Excerpt">$> {{post.excerpt}}</p>
   </li>
 </template>
 
@@ -73,6 +74,11 @@ export default {
 
 <style lang="scss" scoped>
 .PostListItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.PostListItem__Container {
   height: 16em;
   box-sizing: border-box;
   border: .5em solid var(--bah--primary-color);
@@ -106,5 +112,10 @@ export default {
     color: var(--bah--primary-color);
     background-color: var(--bah--secondary-color-dark);
     padding: 1em;
+}
+
+.PostListItem__Excerpt {
+  color: var(--bah--dark-color);
+  margin: 2em .5em;
 }
 </style>
