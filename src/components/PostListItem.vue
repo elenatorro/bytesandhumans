@@ -37,7 +37,7 @@ export default {
     style() {
       return this.loaded
         ? {'background-image': `url('${this.src}')`}
-        : {'background-color': 'inherit'}
+        : {'background-color': 'var(--bah--primary-color)'}
     }
   },
   methods: {
