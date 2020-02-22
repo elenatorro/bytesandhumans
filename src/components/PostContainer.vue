@@ -34,6 +34,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/style/settings/responsive';
+
 .PostContainer {
   margin: 0;
 }
@@ -52,10 +54,12 @@ export default {
   position: absolute;
   left: 8em;
   max-height: 20em;
+  height: 20em;
   top: 2em;
   z-index: -1;
   border: .5em solid var(--bah--third-color);
   transform: rotate(5deg);
+  box-sizing: border-box;
 }
 
 .PostContainer__Title {
@@ -85,5 +89,27 @@ export default {
 .PostContainer__Content {
   padding: 4em 0;
   line-height: 1.5;
+}
+
+@media (max-width: $bah-laptop__min-width) {
+  .PostContainer__Header {
+    height: 16em;
+  }
+
+  .PostContainer__Title {
+    max-width: 100vw;
+    font-size: 1.5em;
+  }
+
+  .PostContainer__Date {
+    margin-top: 1em;
+  }
+
+  .PostContainer__Image {
+    left: 0em;
+    max-height: 12em;
+    height: 12em;
+    top: 4em;
+  }
 }
 </style>

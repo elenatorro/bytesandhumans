@@ -10,8 +10,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/style/settings/responsive';
+
 .HeaderTitle {
   font-size: 4rem;
   color: var(--bah--primary-color-dark);
+}
+
+@media (max-width: $bah-laptop__min-width) {
+  .HeaderTitle {
+    font-size: 3.25rem;
+    line-height: 1;
+  }
 }
 </style>

@@ -11,6 +11,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/style/settings/responsive';
+
 .HeaderContainer {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,12 @@ export default {
 
   p {
     margin: 1em 0;
+  }
+}
+
+@media (max-width: $bah-laptop__min-width) {
+  .HeaderContainer {
+    padding: 2em;
   }
 }
 </style>

@@ -19,6 +19,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/style/settings/responsive';
+
 .NavBar__List {
   display: flex;
   justify-content: flex-end;
@@ -38,6 +40,17 @@ export default {
     &:focus {
       color: var(--bah--primary-color-dark);
     }
+  }
+}
+
+@media (max-width: $bah-laptop__min-width) {
+  .NavBar__List {
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+
+  .NavBar__ListItem {
+    padding: 2em 0em 2em 2em;
   }
 }
 </style>

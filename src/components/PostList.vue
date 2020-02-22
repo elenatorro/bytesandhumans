@@ -40,6 +40,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/style/settings/responsive';
+
 .PostList {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -80,5 +82,11 @@ export default {
     color: var(--bah--primary-color);
     background-color: var(--bah--secondary-color-dark);
     padding: 1em;
+}
+
+@media (max-width: $bah-laptop__min-width) {
+  .PostList {
+    grid-template-columns: none;
+  }
 }
 </style>
