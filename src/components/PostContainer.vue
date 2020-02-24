@@ -56,6 +56,7 @@ export default {
   grid-template-columns: 1fr 3fr 1fr;
   grid-gap: 1em;
   border-top: .5em solid var(--bah--third-color);
+  overflow: hidden;
 }
 
 .PostContainer__Aside {
@@ -77,14 +78,15 @@ export default {
 }
 
 .PostContainer__Header--title {
+  width: 100%;
   z-index: 1;
 }
 
 .PostContainer__Image {
   position: absolute;
   top: 1em;
-  min-height: 15em;
-  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
   z-index: -1;
   border: .5em solid var(--bah--third-color);
   box-shadow: .5em .5em 0px var(--bah--dark-color);
@@ -128,7 +130,7 @@ p.PostContainer__Date {
   }
 
   .PostContainer__Header {
-    height: 16em;
+    height: 20em;
   }
 
   .PostContainer__Title {
@@ -143,7 +145,6 @@ p.PostContainer__Date {
   }
 
   .PostContainer__Image {
-    left: 6em;
     top: 3em;
   }
 

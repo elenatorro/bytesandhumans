@@ -23,14 +23,19 @@ export default {
 
   p {
     font-size: 1.25em;
-    margin: -3em 0 0 1em;
-    transform: rotate(-3deg);
+    margin: -1.5em 0 0 4.25em;
+    line-height: 1.25;
   }
 }
 
 @media (max-width: $bah-laptop__min-width) {
   .HeaderContainer {
     padding: 2em;
+
+    p {
+      font-size: 1.2em;
+      margin: 1em 0 0 0;
+    }
   }
 }
 </style>

@@ -58,8 +58,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: './../_includes/scripts.html',
-      template: './_includes/_scripts.html'
+      filename: './../_includes/scripts.html'
     }),
     new VueLoaderPlugin()
   ],
