@@ -8,16 +8,6 @@ p {
   margin: 0
 }
 
-ul {
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 a {
   color: var(--bah--primary-color-dark);
   text-decoration: none;
@@ -26,4 +16,9 @@ a {
   &:focus {
     color: var(--bah--primary-color-dark);
   }
+}
+
+.highlight {
+  padding: 1em 2em;
+  box-shadow: .5em .5em 0px var(--bah--third-color);
 }

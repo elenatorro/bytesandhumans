@@ -1,5 +1,5 @@
 <template>
-  <h1 class="HeaderTitle">{{ title }}</h1>
+  <h1 class="HeaderTitle bah-text-gradient">{{ title }}</h1>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
 
 @media (max-width: $bah-laptop__min-width) {
   .HeaderTitle {
-    font-size: 3.25rem;
+    font-size: 3.5rem;
     line-height: 1;
   }
 }

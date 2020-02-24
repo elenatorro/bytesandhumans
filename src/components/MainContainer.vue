@@ -23,7 +23,8 @@ export default {
 
 @media (max-width: $bah-laptop__min-width) {
   .MainContainer {
-    grid-template-columns: none;
+    display: flex;
+    flex-direction: column-reverse;
     padding: 2em;
   }
 }

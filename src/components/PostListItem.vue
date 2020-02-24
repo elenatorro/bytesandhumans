@@ -111,7 +111,9 @@ export default {
     right: -2em;
     color: var(--bah--primary-color);
     background-color: var(--bah--secondary-color-dark);
-    padding: 1em;
+    padding: 0.75em;
+    font-weight: 800;
+    font-size: 1.2em;
 }
 
 .PostListItem__Excerpt {

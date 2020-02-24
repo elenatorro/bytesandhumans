@@ -22,7 +22,9 @@ export default {
   border-bottom: .5em solid var(--bah--third-color);
 
   p {
-    margin: 1em 0;
+    font-size: 1.25em;
+    margin: -3em 0 0 1em;
+    transform: rotate(-3deg);
   }
 }
 

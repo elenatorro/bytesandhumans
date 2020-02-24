@@ -1,0 +1,99 @@
+.PostContainer,
+.PageContainer {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1.5em 0 .5em 0;
+    line-height: 1;
+    color: var(--bah--contrast-color);
+  }
+
+  h1 {
+    font-size: 3.25em;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  h4 {
+    font-size: 2em;
+  }
+
+  h5 {
+    font-size: 1.5em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1em;
+    margin: 1em 0;
+  }
+
+  ul, ol {
+    line-height: 2;
+
+    li {
+      list-style: inherit;
+    }
+  }
+
+  img {
+    max-height: 30em;
+  }
+
+  blockquote {
+    border: 0.5em solid var(--bah--secondary-color-dark);
+    box-shadow: .5em .5em 0px var(--bah--primary-color);
+    color: var(--bah--black-color);
+    padding: 2em;
+    margin: 3em auto 1em auto;
+    width: 80%;
+  }
+
+  table {
+    box-shadow: .5em .5em 0px var(--bah--primary-color);
+  }
+}
+
+@media (max-width: $bah-laptop__min-width) {
+  h1 {
+    font-size: 2.75em;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  h4 {
+    font-size: 1.75em;
+  }
+
+  h5 {
+    font-size: 1.5em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  .PostContainer {
+    img {
+      max-height: 10em;
+    }
+  }
+}

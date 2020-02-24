@@ -1,0 +1,23 @@
+table{
+  border-collapse:collapse;
+  width:100%;
+}
+
+thead {
+  background: var(--bah--secondary-color-dark);
+  padding: .5em 1em;
+}
+
+th, td{
+  text-align: left;
+  padding: .5em 1em;
+}
+
+tbody tr:nth-child(even){
+  background:#ECF0F1;
+}
+
+tbody tr:hover{
+background:#BDC3C7;
+  color:#FFFFFF;
+}

@@ -6,7 +6,7 @@ permalink: /contact/
 
 <header-container>
   <header-title title="{{ site.title }}"></header-title>
-  <p>{{ site.description }}</p>
+  <p class="bah-text-gradient">{{ site.description }}</p>
 </header-container>
 
 <main-container>

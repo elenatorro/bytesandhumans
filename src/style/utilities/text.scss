@@ -1,0 +1,14 @@
+.bah-text-gradient {
+  display: inline-block;
+  line-height: 2;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(90deg,
+    var(--bah--primary-color) 0%,
+    var(--bah--contrast-color) 33%,
+    var(--bah--dark-color) 66%
+  )
+}

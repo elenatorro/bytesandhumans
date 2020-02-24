@@ -12,17 +12,14 @@
   <div id="app">
     <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify }}></nav-bar>
 
-    <post-container
-      title="{{ page.title }}"
-      url="{{ page.url }}"
-      date="{{ page.date }}"
-      image="{{ page.image }}"
-      :categories="{{ page.categories | jsonify }}"
-      >
-      <template slot="content">
-        {{ content }}
-      </template>
-    </post-container>
+    <header-container>
+      <header-title title="{{ site.title }}"></header-title>
+      <p class="bah-text-gradient">{{ site.description }}</p>
+    </header-container>
+
+    <page-container>
+      {{ content }}
+    </page-container>
   </div>
   {% include scripts.html %}
 </body>

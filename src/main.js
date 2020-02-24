@@ -9,6 +9,7 @@ import HighlightsContainer from './components/HighlightsContainer'
 import PostList from './components/PostList'
 import PostListItem from './components/PostListItem'
 import PostContainer from './components/PostContainer'
+import PageContainer from './components/PageContainer'
 import './style/main.scss'
 
 import * as moment from 'vue-moment'
@@ -22,11 +23,18 @@ Vue.component('headerTitle', HeaderTitle)
 Vue.component('postList', PostList)
 Vue.component('postListItem', PostListItem)
 Vue.component('postContainer', PostContainer)
+Vue.component('pageContainer', PageContainer)
 
 Vue.use(moment)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  delimiters: ['{$' , '$}']
-})
+  delimiters: ['{$' , '$}'],
+  data: {
+    isLoading: true
+  },
+  mounted () {
+    this.isLoading = false
+  }
+}).$mount("#app");

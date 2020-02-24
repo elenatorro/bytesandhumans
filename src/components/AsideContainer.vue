@@ -11,9 +11,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/style/settings/responsive';
+
 .AsideContainer {
-  border: 0.5em solid var(--bah--contrast-color);
-  color: var(--bah--contrast-color);
-  padding: 2em;
+  margin-left: 1em;
+}
+
+@media (max-width: $bah-laptop__min-width) {
+  .AsideContainer {
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
 }
 </style>

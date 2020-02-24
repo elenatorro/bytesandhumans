@@ -26,10 +26,14 @@ export default {
   justify-content: flex-end;
   background-color: var(--bah--secondary-color-dark);
   margin: 0;
+  padding: 0;
   padding-right: 4em;
 }
 
 .NavBar__ListItem {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   padding: 2em;
 
   a {

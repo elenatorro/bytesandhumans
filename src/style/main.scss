@@ -2,11 +2,16 @@
 @import 'settings/core';
 @import 'settings/colors';
 @import 'settings/responsive';
+@import 'settings/syntax';
 
 @import 'generic/fonts';
 
-@import 'components/navbar';
+@import 'elements/table';
 
+@import 'components/navbar';
+@import 'components/blog-post';
+
+@import 'utilities/text';
 
 html,
 body {

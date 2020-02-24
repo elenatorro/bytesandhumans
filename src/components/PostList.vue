@@ -47,6 +47,7 @@ export default {
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
   margin: 0;
+  padding: 0;
 }
 
 .PostList__ListItem {
