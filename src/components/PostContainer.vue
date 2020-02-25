@@ -5,11 +5,9 @@
     </aside>
     <section class="PostContainer__Center">
       <header class="PostContainer__Header">
-        <div class="PostContainer__Header--title">
-          <p class="PostContainer__Date">🗓️ {{ parsedDate | moment('DD/MM/YYYY') }}</p>
-          <h1 class="PostContainer__Title" v-if="title" :data-title="title">{{ title }}</h1>
-        </div>
+        <h1 class="PostContainer__Title" v-if="title" :data-title="title">{{ title }}</h1>
         <img class="PostContainer__Image" v-if="image" :src="imagePath" />
+        <p class="PostContainer__Date">🗓️ {{ parsedDate | moment('DD/MM/YYYY') }}</p>
       </header>
       <div class="PostContainer__Content">
         <slot name="content"></slot>
@@ -74,19 +72,14 @@ export default {
   height: 25em;
   z-index: 1;
   display: flex;
-  justify-content: center;
-}
-
-.PostContainer__Header--title {
-  width: 100%;
-  z-index: 1;
+  flex-direction: column;
+  margin: 4em 0 0 0;
 }
 
 .PostContainer__Image {
   position: absolute;
-  top: 1em;
-  min-height: 100%;
-  margin: 0 auto;
+  height: 100%;
+  top: 0;
   z-index: -1;
   border: .5em solid var(--bah--third-color);
   box-shadow: .5em .5em 0px var(--bah--dark-color);
@@ -94,27 +87,19 @@ export default {
 }
 
 .PostContainer__Title {
-  transform: rotate(-5deg);
-  position: relative;
+  transform: rotate(-10deg);
+  position: absolute;
+  color: var(--bah--dark-color);
   background-color: var(--bah--third-color);
-  color: transparent;
-  margin: 0;
-
-  &::before {
-    color: black;
-    position: absolute;
-    content: attr(data-title);
-    color: var(--bah--dark-color);
-    left: .5em;
-    top: -.5em;
-  }
+  padding: .5em 1em;
+  left: -2em;
+  top: -1em;
 }
 
 p.PostContainer__Date {
-  transform: rotate(-5deg);
-  margin-top: .5em;
-  max-width: 35vw;
-  margin: 1em;
+  position: absolute;
+  margin: 1em 0;
+  bottom: -4em;
 }
 
 .PostContainer__Content {
@@ -129,23 +114,20 @@ p.PostContainer__Date {
     flex-direction: column;
   }
 
-  .PostContainer__Header {
-    height: 20em;
-  }
-
   .PostContainer__Title {
-    max-width: 100vw;
     font-size: 2.5em;
-    margin-top: 0em;
-    margin-bottom: -1em;
-  }
-
-  p.PostContainer__Date {
-    margin: .5em;
+    left: 0;
   }
 
   .PostContainer__Image {
-    top: 3em;
+    min-height: 20em;
+    margin: 1em;
+  }
+
+  p.PostContainer__Date {
+    position: absolute;
+    margin: 0 1em;
+    bottom: 1em;
   }
 
   .PostContainer__Content {
