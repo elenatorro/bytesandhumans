@@ -55,6 +55,7 @@ export default {
       this.observer.observe(this.$el)
     }
   },
+
   beforeMount() {
     this.image.onload = () => {
       this.loaded = true
@@ -81,7 +82,7 @@ export default {
 .PostListItem__Container {
   height: 16em;
   box-sizing: border-box;
-  border: .5em solid var(--bah--primary-color);
+  border: .5em solid var(--bah--secondary-color-dark);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,8 +110,8 @@ export default {
     position: absolute;
     top: 1em;
     right: -2em;
-    color: var(--bah--primary-color);
     background-color: var(--bah--secondary-color-dark);
+    color: var(--bah--dark-color);
     padding: 0.75em;
     font-weight: 800;
     font-size: 1.2em;

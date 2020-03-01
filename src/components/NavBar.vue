@@ -24,7 +24,7 @@ export default {
 .NavBar__List {
   display: flex;
   justify-content: flex-end;
-  background-color: var(--bah--secondary-color-dark);
+  background-color: var(--bah--dark-color);
   margin: 0;
   padding: 0;
   padding-right: 4em;
@@ -37,12 +37,12 @@ export default {
   padding: 2em;
 
   a {
-    color: var(--bah--primary-color-dark);
+    color: var(--bah--secondary-color-dark);
     text-decoration: none;
 
     &:visited,
     &:focus {
-      color: var(--bah--primary-color-dark);
+      color: var(--bah--secondary-color-dark);
     }
   }
 }

@@ -80,8 +80,8 @@ export default {
     position: absolute;
     top: 1em;
     right: -2em;
-    color: var(--bah--primary-color);
-    background-color: var(--bah--secondary-color-dark);
+    color: var(--bah--secondary-color);
+    background-color: var(--bah--dark-color);
     padding: 1em;
 }
 

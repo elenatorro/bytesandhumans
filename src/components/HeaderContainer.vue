@@ -18,7 +18,7 @@ export default {
   flex-direction: column;
   width: 100%;
   padding: 6em 4em;
-  background-color: var(--bah--secondary-color-dark);
+  background-color: var(--bah--dark-color);
   border-bottom: .5em solid var(--bah--third-color);
 
   p {

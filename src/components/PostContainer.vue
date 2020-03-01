@@ -4,9 +4,8 @@
       <slot name="left-content"></slot>
     </aside>
     <section class="PostContainer__Center">
-      <header class="PostContainer__Header">
+      <header class="PostContainer__Header" :style="this.headerStyle">
         <h1 class="PostContainer__Title" v-if="title" :data-title="title">{{ title }}</h1>
-        <img class="PostContainer__Image" v-if="image" :src="imagePath" />
         <p class="PostContainer__Date">🗓️ {{ parsedDate | moment('DD/MM/YYYY') }}</p>
       </header>
       <div class="PostContainer__Content">
@@ -28,9 +27,20 @@ export default {
     'date',
     'image'
   ],
+  data() {
+    return {
+      postImage: new Image(),
+      loaded: false
+    }
+  },
   computed: {
-    imagePath() {
+    src() {
       return `/assets/img/posts/${this.image}`
+    },
+    headerStyle() {
+      return this.loaded
+        ? {'background-image': `url('${this.src}')`}
+        : {'background-color': 'var(--bah--primary-color)'}
     },
     parsedDate() {
       return new Date(this.date.split(' ')[0])
@@ -41,6 +51,12 @@ export default {
     hasRightAsideSlot() {
       return !!this.$slots['right-content']
     }
+  },
+  beforeMount() {
+    this.postImage.onload = () => {
+      this.loaded = true
+    }
+    this.postImage.src = this.src
   }
 }
 </script>
@@ -74,14 +90,10 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 4em 0 0 0;
-}
-
-.PostContainer__Image {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  z-index: -1;
-  border: .5em solid var(--bah--third-color);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: .5em solid var(--bah--secondary-color-dark);
   box-shadow: .5em .5em 0px var(--bah--dark-color);
   box-sizing: border-box;
 }
@@ -89,8 +101,8 @@ export default {
 .PostContainer__Title {
   transform: rotate(-10deg);
   position: absolute;
+  background-color: var(--bah--secondary-color-dark);
   color: var(--bah--dark-color);
-  background-color: var(--bah--third-color);
   padding: .5em 1em;
   left: -2em;
   top: -1em;
@@ -112,6 +124,7 @@ p.PostContainer__Date {
   .PostContainer {
     display: flex;
     flex-direction: column;
+    padding-top: 0;
   }
 
   .PostContainer__Title {
@@ -119,14 +132,13 @@ p.PostContainer__Date {
     left: 0;
   }
 
-  .PostContainer__Image {
-    min-height: 20em;
-    margin: 1em;
+  .PostContainer__Header {
+    margin: 4em 2em 0;
   }
 
   p.PostContainer__Date {
     position: absolute;
-    margin: 0 1em;
+    margin: 2em 1em;
     bottom: 1em;
   }
 
