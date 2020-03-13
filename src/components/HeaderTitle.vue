@@ -14,6 +14,7 @@ export default {
 
 .HeaderTitle {
   font-size: 4rem;
+  font-family: 'Open Sans';
   color: var(--bah--primary-color-dark);
 }
 

@@ -89,7 +89,7 @@ export default {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  margin: 4em 0 0 0;
+  margin: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

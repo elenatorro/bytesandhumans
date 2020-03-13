@@ -115,6 +115,7 @@ export default {
     padding: 0.75em;
     font-weight: 800;
     font-size: 1.2em;
+    font-family: 'Open Sans';
 }
 
 .PostListItem__Excerpt {
