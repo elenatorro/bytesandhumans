@@ -4,14 +4,14 @@
 {% include head.html %}
 
 <body>
-  <div id="app">
+<div id="app">
     <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify | escape }}></nav-bar>
+    <main-container>
+        <post-list :posts='{{ site.posts | jsonify }}'></post-list>
+    </main-container>
+</div>
 
-    <page-container>
-      {{ content }}
-    </page-container>
-  </div>
-  {% include scripts.html %}
+{% include scripts.html %}
 </body>
 
 </html>

@@ -1,8 +1,11 @@
-- name: About
-  path: about
+- name: Posts
+  path: posts
 
-- name: Contact
-  path: contact
+- name: 'Sobre%20mí'
+  path: 'sobre-mi'
+
+- name: Contacto
+  path: contacto
 
 - name: '🏠'
   path: ''

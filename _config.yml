@@ -1,8 +1,8 @@
 title: Bytes and Humans
 email: your-email@example.com
-description: Divulgación de proyectos tecnológicos creativos centrados en las personas
+description: Divulgación centrada en las personas sobre ciencias de la computación
 #baseurl: ""
-url: "https://bytesandhumans.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://bytesandhumans.com # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bytesandhumans
 markdown: kramdown
 highlighter: rouge

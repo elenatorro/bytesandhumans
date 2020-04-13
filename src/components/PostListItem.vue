@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     src() {
-      return `assets/img/posts/${this.post.image}`
+      return `/assets/img/posts/${this.post.image}`
     },
     style() {
       return this.loaded

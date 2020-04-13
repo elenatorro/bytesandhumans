@@ -19,7 +19,6 @@ export default {
   width: 100%;
   padding: 6em 4em;
   background-color: var(--bah--dark-color);
-  border-bottom: .5em solid var(--bah--third-color);
 
   p {
     font-size: 1.25em;

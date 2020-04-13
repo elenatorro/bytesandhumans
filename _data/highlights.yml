@@ -5,6 +5,17 @@
 # - people
 # - quote
 
-- old:
-- current:
+- title: 'Noticias frescas'
+  type: 'website'
+  items:
+    - name: '🚧 Nada por aquí 🚧'
+      description: 'Aún no tenemos noticias frescas'
+
+- title: 'Relacionados'
+  type: 'website'
+  items:
+    - name: 'Scenio'
+      description: 'Comunidad de ciencia creativa. Youtubers, podcasters, diseñadores, influencers, artistas y gamers de ciencia'
+      image: 'general/scenio_logo.jpg'
+      url: 'http://scenio.es/'
 

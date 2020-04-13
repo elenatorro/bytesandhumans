@@ -1,16 +1,11 @@
 ---
-layout: default
-title: Contact
-permalink: /contact/
+layout: page
+title: Contacto
+permalink: /contacto/
 ---
 
-<header-container>
-  <header-title title="{{ site.title }}"></header-title>
-  <p class="bah-text-gradient">{{ site.description }}</p>
-</header-container>
+## Holi 👋
 
-<main-container>
+Si quieres ponerte en contacto con _BAH!_, puedes hacerlo a través de Twitter en [@BytesAndHumans](https://twitter.com/BytesAndHumans), o por correo electrónico a [bytesandhumans[at]gmail[dot]com](mailto:bytesandhumans@gmail.com?subject=Holi)
 
-Contact Page
 
-</main-container>

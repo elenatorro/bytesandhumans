@@ -2,7 +2,7 @@
   <nav class="NavBar">
     <ul class="NavBar__List">
       <li class="NavBar__ListItem"
-        v-for="(page, index) in pages"
+        v-for="(page, index) in parsedPages"
         :key="index"
         :page="page">
         <a :href="`${url}/${page.path}`">{{page.name}}</a>
@@ -14,7 +14,18 @@
 <script>
 export default {
   name: 'NavBar',
-  props: ['url', 'pages']
+  props: ['url', 'pages'],
+  computed: {
+    parsedPages() {
+      return this.pages.map((page) => {
+        const newPage = {}
+        for (let prop in page) {
+          newPage[prop] = decodeURI(page[prop])
+        }
+        return newPage
+      })
+    }
+  }
 }
 </script>
 

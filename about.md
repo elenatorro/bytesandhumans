@@ -1,19 +1,13 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Sobre mí
+permalink: /sobre-mi/
 ---
 
-## About
+## Sobre mí
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+¡Encantada de que te pases por mi blog! Soy **Elena Torró**, y soy programadora. Puedes saber más sobre mí en [elenatorro.com](https://elenatorro.com)
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+## 🤖 && 👩🏻
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-[jekyll-organization]: https://github.com/jekyll
+El proyecto Bytes And Humans (_BAH!_) nace con el objetivo de comunicar y divulgar conceptos relacionados con la informática y ciencias computacionales desde un punto de vista centrado en las personas. Desde esta perspectiva, vemos que detrás de los avances tecnológicos se encuentran los seres humanos que los han hecho posibles.

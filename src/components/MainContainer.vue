@@ -19,6 +19,7 @@ export default {
   grid-gap: 2em;
   padding: 4em;
   overflow-x: hidden;
+  border-top: .5em solid var(--bah--third-color);
 }
 
 @media (max-width: $bah-laptop__min-width) {
