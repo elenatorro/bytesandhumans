@@ -19,6 +19,7 @@ export default {
   width: 100%;
   padding: 6em 4em;
   background-color: var(--bah--dark-color);
+  position: relative;
 
   p {
     font-size: 1.25em;

@@ -30,21 +30,24 @@
 
   h5 {
     font-size: 1.5em;
+    font-style: bold;
   }
 
   h6 {
-    font-size: 1em;
+    font-size: 1.5em;
+    font-style: italic;
   }
 
   p {
-    font-size: 1em;
-    margin: 1em 0;
+    font-size: 1.125em;
+    margin: 2em 0;
   }
 
   ul, ol {
     line-height: 2;
 
     li {
+      font-size: 1.125em;
       list-style: inherit;
     }
   }

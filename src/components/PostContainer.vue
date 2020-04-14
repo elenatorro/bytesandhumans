@@ -79,7 +79,7 @@ export default {
 
 .PostContainer__Center {
   p {
-    margin: 2em 0;
+    margin: 3em 0;
   }
 }
 

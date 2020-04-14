@@ -1,0 +1,27 @@
+details {
+    border: .5em solid var(--bah--contrast-color);
+    padding: 1em;
+    cursor: pointer;
+    background-color:var(--bah--white-color);
+    margin: 2em 0;
+
+    summary {
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 1em 0;
+            padding-left: 2rem;
+            text-indent: -2rem;
+          }
+        
+          li::before {
+            content: "🍪 ";
+          }
+    }
+}

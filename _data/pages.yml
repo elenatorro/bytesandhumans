@@ -1,8 +1,8 @@
 - name: Posts
   path: posts
 
-- name: 'Sobre%20mí'
-  path: 'sobre-mi'
+- name: 'Sobre%20BAH'
+  path: 'sobre-bah'
 
 - name: Contacto
   path: contacto

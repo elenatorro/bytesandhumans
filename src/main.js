@@ -10,6 +10,7 @@ import PostList from './components/PostList'
 import PostListItem from './components/PostListItem'
 import PostContainer from './components/PostContainer'
 import PageContainer from './components/PageContainer'
+import LasCookies from './components/LasCookies'
 import './style/main.scss'
 
 import * as moment from 'vue-moment'
@@ -24,6 +25,7 @@ Vue.component('postList', PostList)
 Vue.component('postListItem', PostListItem)
 Vue.component('postContainer', PostContainer)
 Vue.component('pageContainer', PageContainer)
+Vue.component('lasCookies', LasCookies)
 
 Vue.use(moment)
 

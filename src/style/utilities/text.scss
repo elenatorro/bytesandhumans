@@ -21,3 +21,19 @@
     )
   }
 }
+
+.bah-u-bold {
+  font-weight: bold;
+}
+
+.bah-u-italic {
+  font-style: italic;
+}
+
+.bah-u-green {
+  color: var(--bah--success-color);
+}
+
+.bah-u-red {
+  color: var(--bah--error-color);
+}

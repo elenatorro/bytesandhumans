@@ -32,7 +32,7 @@ export default {
 }
 
 .HighlightsList {
-  border: 0.5em solid var(--bah--contrast-color);
+  border: .5em solid var(--bah--contrast-color);
   color: var(--bah--contrast-color);
   padding: 1em;
 }
@@ -50,7 +50,7 @@ export default {
   position: absolute;
   left: -3.5em;
   background-color: var(--bah--secondary-color);
-  border: .25em solid var(--bah--contrast-color);
+  border: .5em solid var(--bah--contrast-color);
   color: var(--bah--contrast-color);
   padding: 1em;
   padding: 0;
