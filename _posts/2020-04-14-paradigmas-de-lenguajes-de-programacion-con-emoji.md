@@ -31,6 +31,7 @@ A continuación tenemos una lista de ejemplos de **pseudocódigo** (código que 
   - [Orientado a Objetos](#orientado-a-objetos)
   - [Dinámico](#din%c3%a1mico)
   - [Dirigido por Eventos](#dirigido-por-eventos)
+- [Conclusiones](#conclusiones)
 - [Fuentes](#fuentes)
 
 ### Imperativo
@@ -110,7 +111,7 @@ Si quisiéramos hacer una hamburguesa siguiendo el ejemplo imperativo anterior, 
 
 ### Lógico
 
-Este paradigma es a su vez declarativo (en algunos sition llaman a esto _subparadigma_). El paradigma lógico se basa en conceptos de **lógica matemática**, pero que esto no te asuste. Esto quiere decir que establece unas **reglas lógicas** a través de las cuáles **relacionar** distintos elementos para obtener **una respuesta**.
+Este paradigma es a su vez declarativo (en algunos sitios llaman a esto _subparadigma_). El paradigma lógico se basa en conceptos de **lógica matemática**, pero que esto no te asuste. Esto quiere decir que establece unas **reglas lógicas** a través de las cuáles **relacionar** distintos elementos para obtener **una respuesta**.
 
 Imaginemos que tenemos a los siguientes individuos de una familia: dos niños pequeños, su madre y su abuela.
 
@@ -149,6 +150,10 @@ es 👵🏽 abuela de 👧🏽
 ### Funcional
 
 Este paradigma también cumple el paradigma **declarativo**. Las principales características de la programación funcional son las siguientes:
+
+* Inmutabilidad: No produce **cambios** en los datos de entrada
+* No produce **cambios** o **efectos colaterales** fuera del **contexto** donde se produce
+* Para unos mismos datos de entrada, produce la misma salida
 
 Tenemos una función que se llama **es_vegano** que devuelve **sí** o **no** dependiendo si un ingrediente es vegano o no lo es. Esta función:
 
@@ -299,6 +304,11 @@ Por ejemplo, imaginemos que hemos hecho el sistema de alarma de incendios de una
 
 La resolución de un problema aplicando el paradigma dirigido a eventos puede dar lugar a la aplicación de otros paradigmas o técnicas como la **concurrencia** (¿pueden avisar todos los detectores de temperatura a la vez? ¿pueden activarse todos los aspersores a la vez, o si no, en qué orden?) o la **reactividad** (¿a qué estado pasa un aspersor cuando se enciende? ¿cuándo le aviso de que tiene que terminar?)
 
+## Conclusiones
+
+Como menciono al principio, utilizar un paradigma o estrategia no es incompatible con utilizar otro paradigma o estrategia. Esto dependerá del lenguaje de programación, del problema a resolver, y de otras variables.
+
+Espero que hayas disfrutado de estas divertidas metáforas hechas con emoji 😅
 
 ## Fuentes
 
