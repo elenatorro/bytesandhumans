@@ -138,8 +138,8 @@ p.PostContainer__Date {
 
   p.PostContainer__Date {
     position: absolute;
-    margin: 2em 1em;
-    bottom: 1em;
+    margin: 0;
+    bottom: -3em;
   }
 
   .PostContainer__Content {
