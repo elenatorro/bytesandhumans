@@ -6,9 +6,9 @@
 <body>
 <div id="app">
     <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify | escape }}></nav-bar>
-    <main-container>
+    <posts-container>
         <post-list :posts='{{ site.posts | jsonify }}'></post-list>
-    </main-container>
+    </posts-container>
 </div>
 
 {% include scripts.html %}

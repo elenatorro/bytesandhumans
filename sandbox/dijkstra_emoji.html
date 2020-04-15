@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+ </head>
+ <body>
+ </body>
+  <script>
+    const HAMSTER = '🐹'
+    const APPLE = '🍎'
+    const BROCOLI = '🥦'
+    const NUT = '🌰'
+    const CORN = '🌽'
+    const CHEESE = '🧀'
+    const FLAG = '🏁'
+    const HOUSE = '🏠'
+    const FONT_SIZE = 52
+
+    const nodeA = [
+      50,
+      250
+    ]
+
+    const HAMSTER_POS = [
+      nodeA[0], nodeA[1]
+    ]
+
+    const nodeB = [
+      200,
+      100
+    ]
+
+    const nodeC = [
+      330,
+      400
+    ]
+
+    const nodeD = [
+      600,
+      130
+    ]
+
+    const nodeE = [
+      600,
+      350
+    ]
+
+    const nodeF = [
+      330,
+      230
+    ]
+
+    const HAMSTER_PATH = [
+      [nodeB[0], nodeB[1]],
+      [nodeF[0], nodeF[1]],
+      [nodeC[0], nodeC[1]],
+      [nodeD[0], nodeD[1]],
+      [nodeE[0], nodeE[1]]
+    ]
+
+    let currentPath = 0
+
+    function setup() {
+      createCanvas(700, 480);
+    }
+
+    function draw() {
+      clear()
+
+      line(nodeA[0], nodeA[1], nodeB[0], nodeB[1])
+      line(nodeA[0], nodeA[1], nodeC[0], nodeC[1])
+      line(nodeA[0], nodeA[1], nodeF[0], nodeF[1])
+      line(nodeB[0], nodeB[1], nodeF[0], nodeF[1])
+      line(nodeB[0], nodeB[1], nodeD[0], nodeD[1])
+      line(nodeF[0], nodeF[1], nodeD[0], nodeD[1])
+      line(nodeC[0], nodeC[1], nodeD[0], nodeD[1])
+      line(nodeC[0], nodeC[1], nodeF[0], nodeF[1])
+      line(nodeC[0], nodeC[1], nodeE[0], nodeE[1])
+      line(nodeD[0], nodeD[1], nodeE[0], nodeE[1])
+
+      textSize(FONT_SIZE);
+      textAlign(CENTER, CENTER);
+
+      text(HOUSE, nodeA[0], nodeA[1]);
+      text(APPLE, nodeB[0], nodeB[1]);
+      text(BROCOLI, nodeC[0], nodeC[1]);
+      text(NUT, nodeD[0], nodeD[1]);
+      text(CHEESE, nodeE[0], nodeE[1]);
+      text(FLAG, nodeE[0] + FONT_SIZE, nodeE[1]);
+      text(CORN, nodeF[0], nodeF[1]);
+      text(HAMSTER, HAMSTER_POS[0], HAMSTER_POS[1]);
+
+      if (currentPath == 0) {
+        if (HAMSTER_POS[0] < nodeB[0]) {
+          HAMSTER_POS[0] += 1
+        }
+
+        if (HAMSTER_POS[1] > nodeB[1]) {
+          HAMSTER_POS[1] -= 1
+        }
+      }
+
+      if (currentPath == 1) {
+        if (HAMSTER_POS[0] < nodeF[0]) {
+          HAMSTER_POS[0] += 1
+        }
+
+        if (HAMSTER_POS[1] < nodeF[1]) {
+          HAMSTER_POS[1] += 1
+        }
+      }
+
+      if (currentPath == 2) {
+        if (nodeD[1] < HAMSTER_POS[1]) {
+          HAMSTER_POS[1] += 1
+        }
+      }
+
+      if (currentPath == 3) {
+        if (HAMSTER_POS[0] < nodeD[0]) {
+          HAMSTER_POS[0] += 1
+        }
+
+        if (HAMSTER_POS[1] > nodeD[1]) {
+          HAMSTER_POS[1] -= 1
+        }
+      }
+
+      if (currentPath === 4) {
+        if (HAMSTER_POS[0] < nodeE[0]) {
+          HAMSTER_POS[0] += 1
+        }
+
+        if (HAMSTER_POS[1] < nodeE[1]) {
+          HAMSTER_POS[1] += 1
+        }
+      }
+
+      if (currentPath === 5) {
+        HAMSTER_POS[0] = nodeA[0]
+        HAMSTER_POS[1] = nodeA[1]
+        currentPath = 0
+      }
+
+      if ((HAMSTER_POS[0] === HAMSTER_PATH[currentPath][0]) && (HAMSTER_POS[1] === HAMSTER_PATH[currentPath][1])) {
+        currentPath++
+      }
+    }
+  </script>
+</html>

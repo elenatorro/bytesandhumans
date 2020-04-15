@@ -48,7 +48,7 @@ export default {
   padding: 1em 0;
   align-items: center;
   position: absolute;
-  left: -3.5em;
+  left: -2.5em;
   background-color: var(--bah--secondary-color);
   border: .5em solid var(--bah--contrast-color);
   color: var(--bah--contrast-color);

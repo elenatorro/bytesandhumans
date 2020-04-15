@@ -108,8 +108,8 @@ export default {
 
 .PostListItem__Title {
     position: absolute;
-    top: 1em;
-    right: -2em;
+    top: -4em;
+    left: 1em;
     background-color: var(--bah--secondary-color-dark);
     color: var(--bah--dark-color);
     padding: 0.75em;

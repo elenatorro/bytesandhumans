@@ -21,11 +21,11 @@
   }
 
   h3 {
-    font-size: 2.25em;
+    font-size: 2em;
   }
 
   h4 {
-    font-size: 2em;
+    font-size: 1.75em;
   }
 
   h5 {
@@ -44,11 +44,16 @@
   }
 
   ul, ol {
-    line-height: 2;
+    line-height: 1.5em;
+    margin: 3em 0;
 
     li {
-      font-size: 1.125em;
+      font-size: 1.125rem;
       list-style: inherit;
+    }
+
+    ul {
+      margin: 0;
     }
   }
 
@@ -57,12 +62,31 @@
     box-shadow: .5em .5em 0px var(--bah--primary-color);
     color: var(--bah--black-color);
     padding: 2em;
-    margin: 3em auto 1em auto;
-    width: 80%;
+    margin: 0;
+    background-color: var(--bah--white-color);
   }
 
   table {
     box-shadow: .5em .5em 0px var(--bah--primary-color);
+  }
+
+  strong {
+    color: var(--bah--contrast-color);
+  }
+
+  .highlight {
+    padding: 1em 2em;
+    overflow-x: scroll;
+    border: 0.5em solid var(--bah--secondary-color-dark);
+    box-shadow: .5em .5em 0px var(--bah--primary-color);
+    margin-bottom: 1em;
+    background-color: var(--bah--white-color);
+  }
+
+  iframe {
+    border: 0.5em solid var(--bah--secondary-color-dark);
+    box-shadow: .5em .5em 0px var(--bah--primary-color);
+    margin: 3em 0;
   }
 }
 
