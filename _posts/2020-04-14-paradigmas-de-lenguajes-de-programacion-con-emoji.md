@@ -29,9 +29,10 @@ A continuación tenemos una lista de ejemplos de **pseudocódigo** (código que 
   - [Lógico](#l%c3%b3gico)
   - [Funcional](#funcional)
   - [Orientado a Objetos](#orientado-a-objetos)
-  - [Dinámico](#din%c3%a1mico)
+  - [Programación dinámica](#programaci%c3%b3n-din%c3%a1mica)
   - [Dirigido por Eventos](#dirigido-por-eventos)
 - [Conclusiones](#conclusiones)
+- [Correcciones](#correcciones)
 - [Fuentes](#fuentes)
 
 ### Imperativo
@@ -262,10 +263,9 @@ Menú:
 menu = nuevo Menú(🥗, 🍲, 🍮)
 ```
 
+### Programación dinámica
 
-### Dinámico
-
-El objetivo principal de la programación dinámica es el de hacer más **óptimo** un programa u obtener la solución más **óptima** a un problema. Para ello, se estudia qué pasos hay que utilizar de manera que, entre todas las soluciones posibles, se obtenga **la mejor**.
+Siendo correctos, la **programación dinámica** no se define como **paradigma** sino como una **técnica** de resolución de problemas. El objetivo principal de la programación dinámica es el de hacer lo más **óptimo** posible un programa u obtener la solución [más **óptima** cercana a la óptima](#correcciones) a un problema. Para ello, se estudia qué pasos hay que utilizar, dividiendo el problema en problemas **más pequeños**.
 
 En el siguiente ejemplo hay un hamster 🐹 que está rodeado por distintos alimentos. Pero lo que más le gusta al pequeño roedor es el queso 🧀. Por eso, decide pasar por **cada uno** de los alimentos hasta llegar al queso, que será el último que coma. Como es un hamster muy espabilado, empieza por el alimento que **más cerca está**, siempre y cuando:
 
@@ -309,6 +309,21 @@ La resolución de un problema aplicando el paradigma dirigido a eventos puede da
 Como menciono al principio, utilizar un paradigma o estrategia no es incompatible con utilizar otro paradigma o estrategia. Esto dependerá del lenguaje de programación, del problema a resolver, y de otras variables.
 
 Espero que hayas disfrutado de estas divertidas metáforas hechas con emoji 😅
+
+## Correcciones
+
+A continuación añado algunas de las correcciones. Además, se pueden ver todos los cambios en [GitHub](https://github.com/elenatorro/bytesandhumans/blob/master/_posts/2020-04-14-paradigmas-de-lenguajes-de-programacion-con-emoji.md) ya que tanto el blog como su contenido son de código abierto.
+
+**Sobre la programación dinámica:**
+
+Gracias a [Iago Lastra](https://twitter.com/IagoLast) y a [Sinclert Pérez](https://twitter.com/Sinclert_95)
+
+  - Siendo correctos, la **programación dinámica** no se define como **paradigma** sino como una **técnica** de resolución de problemas
+  - Es más correcto decir que el objetivo es conseguir una solución **lo más cercana posible** a la óptima que conseguir la solución **óptima**. Por ejemplo, es posible que la solución **más óptima** sea **imposible** de conseguir por distintas razones (tiempo, recursos, etc) pero se consiga una solución **suficientemente óptima**.
+
+**Otros:**
+
+Corrección de typos gracias a [María Ballesteros](https://twitter.com/maballesrin) y [Marilén](https://twitter.com/maruilen)
 
 ## Fuentes
 
