@@ -5,12 +5,16 @@
 
   {% if page.image %}
   <meta property="og:image" content="{{ site.url }}/{{ page.image }}" />
+  <meta property="twitter:image" content="{{ site.url }}/{{ page.image }}" />
   {% else %}
   <meta property="og:image" content="{{ site.url }}/assets/img/general/bah.png" />
+  <meta property="twitter:image" content="{{ site.url }}/assets/img/general/bah.png" />
   {% endif %}
 
   <meta property="og:description" content="{{ page.excerpt }}" />
+  <meta property="twitter:description" content="{{ page.excerpt }}" />
   <meta property="og:title" content="{{ page.title }}" />
+  <meta property="twitter:title" content="{{ page.title }}" />
 
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
