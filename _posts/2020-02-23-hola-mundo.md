@@ -1,6 +1,6 @@
 ---
 layout: post
-image: "hola-mundo-thumbnail.png"
+image: "/assets/img/posts/hola-mundo-thumbnail.png"
 title: "Hola, Mundo :)"
 excerpt: "Bienvenido a Bytes and Humans"
 ---

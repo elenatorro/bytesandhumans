@@ -1,6 +1,6 @@
 ---
 layout: post
-image: "paradigmas.png"
+image: "/assets/img/posts/paradigmas.png"
 title: "Paradigmas con emoji"
 excerpt: "¿Cuáles son los distintos paradigmas que existen por los que se clasifican los lenguajes de programación? Te lo cuento con emoji"
 ---

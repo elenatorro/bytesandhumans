@@ -2,9 +2,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta property="og:image" content="{{ site.url }}/assets/img/posts/{{ page.image }}" />
-  <meta property="og:description"
-    content="{{ page.excerpt }}" />
+
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}/{{ page.image }}" />
+  {% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/img/general/bah.png" />
+  {% endif %}
+
+  <meta property="og:description" content="{{ page.excerpt }}" />
   <meta property="og:title" content="{{ page.title }}" />
 
   <link rel="icon"

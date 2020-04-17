@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     src() {
-      return `/assets/img/posts/${this.image}`
+      return `${this.image}`
     },
     headerStyle() {
       return this.loaded
