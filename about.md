@@ -12,6 +12,10 @@ El proyecto Bytes And Humans (_BAH!_) nace con el objetivo de comunicar y divulg
 
 ¡Encantada de que te pases por mi blog! Soy **Elena Torró**, y soy programadora. Puedes saber más sobre mí en [elenatorro.com](https://elenatorro.com)
 
+## RSS
+
+Añade Bytes And Humans a tu feed para estar al día de contenido nuevo: [https://bytesandhumans.com/feed.xml](https://bytesandhumans.com/feed.xml)
+
 ## Más cosas
 
 Cualquier feedback o sugerencia es más que bienvenida. Cuéntame lo que te preocupa, te inquieta o te perturba. Por ejemplo, si tienes alguna duda sobre el uso de las cookies en esta web, [te lo cuento aquí](/cookies)
