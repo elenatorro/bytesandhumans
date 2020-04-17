@@ -2,6 +2,7 @@
 layout: page
 title: Las Cookies
 permalink: /cookies/
+image: "assets/img/general/cookies.png"
 ---
 
 ## 🍪 Las Cookies 🍪
@@ -23,7 +24,7 @@ Es posible que estés aquí porque te preocupen las **cookies** de esta web pero
     </div>
 </details>
 
-A día de hoy, en esta web **no hay cookies**. Ni una. 
+A día de hoy, en esta web **no hay cookies**. Ni una.
 
 Cero. None. Null. Undefined.
 
