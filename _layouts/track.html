@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+
+{% include head_post.html %}
+
+<body>
+  <div id="app">
+    <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify | escape }}></nav-bar>
+
+    <page-container>
+      {{ content }}
+    </page-container>
+  </div>
+
+  {% include scripts.html %}
+  {% include tracker.html %}
+</body>
+
+</html>

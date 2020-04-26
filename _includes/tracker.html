@@ -1,0 +1,44 @@
+<script type="text/javascript">
+  window.onload = function () {
+    var url = '/.netlify/functions/track';
+
+    var data = [
+      [
+        'event_name',
+        'event_payload',
+        'date_time',
+        'navigator_language',
+        'navigator_languages',
+        'navigator_user_agent',
+        'navigator_platform',
+        'document_referrer',
+        'location_href',
+        'location_origin',
+        'window_screen_x',
+        'window_screen_y]'
+      ],
+      [
+        'load',
+        '',
+        Date.now(),
+        navigator.language,
+        navigator.languages,
+        navigator.userAgent,
+        navigator.platform,
+        document.referrer,
+        location.href,
+        location.origin,
+        window.screenX,
+        window.screenY
+      ]
+    ]
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+  }
+</script>
