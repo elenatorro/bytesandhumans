@@ -11,7 +11,7 @@ exports.handler = function (event) {
   const row = JSON.parse(event.body)
   const csv = toCSV(row)
   const formData = new FormData()
-  const url = `${TINYBIRD_API}?name=${TINYBIRD_DATASOURCE_NAME}&method=append`
+  const url = `${TINYBIRD_API}?name=${TINYBIRD_DATASOURCE_NAME}&mode=append`
 
   formData.append('csv', csv)
 
