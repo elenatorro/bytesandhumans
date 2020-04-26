@@ -50,6 +50,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: file => (
           /node_modules/.test(file) &&
+          /functions/.test(file) &&
           !/\.vue\.js/.test(file)
         )
       }
