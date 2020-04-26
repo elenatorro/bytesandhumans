@@ -8,8 +8,8 @@ const {
 } = process.env
 
 exports.handler = function (event) {
-  const row = JSON.parse(event.body)
-  const csv = toCSV(row)
+  const rows = JSON.parse(event.body)
+  const csv = toCSV(rows)
   const formData = new FormData()
   const url = `${TINYBIRD_API}?name=${TINYBIRD_DATASOURCE_NAME}&mode=append`
 
@@ -43,10 +43,10 @@ function onError(error) {
   }
 }
 
-function toCSV(data) {
+function toCSV(rows) {
   const escapeQuotes = (str = '') => str.replace(/\"/g, '""')
 
-  return data.map(item => {
+  return rows.map(item => {
     return item.map(field => {
       if (typeof (field) === 'string') {
         field = escapeQuotes(field)
