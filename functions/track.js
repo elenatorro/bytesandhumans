@@ -29,10 +29,10 @@ exports.handler = function (event) {
     .catch(onError)
 }
 
-function onSuccess() {
+function onSuccess(res) {
   return {
     statusCode: 200,
-    body: 'Success'
+    body: JSON.stringify(res)
   }
 }
 
