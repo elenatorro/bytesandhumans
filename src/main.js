@@ -15,7 +15,6 @@ import PageContainer from './components/PageContainer'
 import LasCookies from './components/LasCookies'
 import * as moment from 'vue-moment'
 import './style/main.scss'
-import 'animate.css'
 
 Vue.component('app', App)
 Vue.component('navBar', NavBar)
