@@ -23,7 +23,8 @@ export default {
   },
   beforeMount() {
     if (this.posts.length) {
-      this.postList.push(this.posts[0])
+      const { title, image, url, excerp } = this.posts[0]
+      this.postList.push({ title, image, url, excerp })
     }
   },
   components: {
@@ -32,7 +33,8 @@ export default {
   methods: {
     onPostIntersecting(index) {
       if (this.posts[index+1]) {
-        this.postList.push(this.posts[index+1])
+        const { title, image, url, excerp } = this.posts[index+1]
+        this.postList.push({ title, image, url, excerp })
       }
     }
   }
@@ -46,6 +48,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
+  width: 100%;
   margin: 0;
   padding: 0;
 }

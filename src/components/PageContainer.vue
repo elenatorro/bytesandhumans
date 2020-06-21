@@ -1,14 +1,24 @@
 <template>
   <section class="PageContainer">
     <div class="PageContent">
-      <slot></slot>
+      <slot :class="[ loaded ? 'loaded' : '', 'SlotContainer']" name="content"></slot>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'PageContainer'
+  name: 'PageContainer',
+  data () {
+    return {
+      loaded: false
+    }
+  },
+  beforeMount () {
+      window.addEventListener('load', () => {
+        this.loaded = false
+      })
+  }
 }
 </script>
 
@@ -29,6 +39,14 @@ export default {
 .PageContent {
   width: 100%;
   max-width: 800px;
+}
+
+.SlotContainer {
+  display: none;
+
+  &.loaded {
+    display: block;
+  }
 }
 
 @media (max-width: $bah-laptop__min-width) {

@@ -4,12 +4,14 @@
 {% include head.html %}
 
 <body>
-<div id="app">
-    <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify | escape }}></nav-bar>
-    <posts-container>
-        <post-list :posts='{{ site.posts | jsonify }}'></post-list>
-    </posts-container>
-</div>
+    <div id="app">
+        <app>
+            <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify | escape }}></nav-bar>
+            <posts-container>
+                <post-list :posts='{{ site.posts | jsonify | escape }}'></post-list>
+            </posts-container>
+        </app>
+    </div>
 
 {% include scripts.html %}
 {% include tracker.html %}

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 
+import App from './App'
 import NavBar from './components/NavBar'
 import HeaderContainer from './components/HeaderContainer'
 import HeaderTitle from './components/HeaderTitle'
@@ -14,7 +15,9 @@ import PageContainer from './components/PageContainer'
 import LasCookies from './components/LasCookies'
 import * as moment from 'vue-moment'
 import './style/main.scss'
+import 'animate.css'
 
+Vue.component('app', App)
 Vue.component('navBar', NavBar)
 Vue.component('headerContainer', HeaderContainer)
 Vue.component('mainContainer', MainContainer)
@@ -34,10 +37,14 @@ Vue.use(moment)
 new Vue({
   el: '#app',
   delimiters: ['{$' , '$}'],
-  data: {
-    isLoading: true
+  data() {
+    return {
+      loaded: false
+    }
   },
-  mounted () {
-    this.isLoading = false
+  beforeMount () {
+      window.addEventListener('load', () => {
+        this.loaded = true
+      })
   }
 }).$mount("#app");

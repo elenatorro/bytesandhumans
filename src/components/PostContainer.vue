@@ -1,5 +1,5 @@
 <template>
-  <section class="PostContainer">
+  <section class="PostContainer" v-cloak>
     <aside :class="[ hasLeftAsideSlot ? 'PostContainer__Aside PostContainer__Aside--left' : '' ]">
       <slot name="left-content"></slot>
     </aside>
@@ -63,6 +63,10 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/style/settings/responsive';
+
+[v-cloak] {
+  display: none;
+}
 
 .PostContainer {
   padding-top: 4em;

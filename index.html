@@ -3,14 +3,12 @@ layout: default
 ---
 
 <header-container>
-  <header-title title="{{ site.title }}"></header-title>
-  <p class="bah-text-gradient">{{ site.description }}</p>
-
+  <header-title title="{{ site.title }}" description="{{ site.description }}"></header-title>
   <las-cookies url="{{ site.url }}"></las-cookies>
 </header-container>
 
 <main-container>
-  <post-list :posts='{{ site.posts | jsonify }}'></post-list>
+  <post-list :posts='{{ site.posts | jsonify | escape }}'></post-list>
   <aside-container>
     <highlights-container :highlights='{{ site.data.highlights | jsonify }}'></highlights-container>
   </aside-container>

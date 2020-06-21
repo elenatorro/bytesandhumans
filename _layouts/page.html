@@ -5,12 +5,17 @@
 
 <body>
   <div id="app">
-    <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify | escape }}></nav-bar>
+    <app>
+      <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify | escape }}></nav-bar>
 
-    <page-container>
-      {{ content }}
-    </page-container>
+      <page-container>
+        <template slot="content">
+          {{ content }}
+        </template>
+      </page-container>
+    </app>
   </div>
+
   {% include scripts.html %}
   {% include tracker.html %}
 </body>

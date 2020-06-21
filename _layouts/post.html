@@ -5,21 +5,24 @@
 
 <body>
   <div id="app">
-    <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify }}></nav-bar>
+    <app>
+      <nav-bar url={{ site.url }} :pages={{ site.data.pages | jsonify }}></nav-bar>
 
-    <post-container
-      title="{{ page.title }}"
-      url="{{ page.url }}"
-      date="{{ page.date }}"
-      image="{{ page.image }}"
-      :categories="{{ page.categories | jsonify }}"
-      >
-      <template slot="content">
-        {{ content }}
-      </template>
-    </post-container>
+      <post-container
+        title="{{ page.title }}"
+        url="{{ page.url }}"
+        date="{{ page.date }}"
+        image="{{ page.image }}"
+        :categories="{{ page.categories | jsonify }}"
+        >
+        <template slot="content">
+          {{ content }}
+        </template>
+      </post-container>
+    </app>
   </div>
   {% include scripts.html %}
+  {% include tracker.html %}
 </body>
 
 </html>
